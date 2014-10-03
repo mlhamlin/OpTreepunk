@@ -18,7 +18,7 @@ public class PlatformExtend : Listener {
 	void Update () {
         if (t < 1)
         {
-            t += 0.01f;
+            t += 0.02f;
         }
         gameObject.transform.localPosition = Vector2.Lerp(from, to, t);
 	}
@@ -29,6 +29,6 @@ public class PlatformExtend : Listener {
         Vector2 lastFrom = from;
         from = to;
         to = lastFrom;
-        t = 0;
+        t = 1-t;
     }
 }
