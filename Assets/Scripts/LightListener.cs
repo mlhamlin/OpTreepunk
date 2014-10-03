@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LightListener : MonoBehaviour, Listener {
+public class LightListener : Listener {
 
 	public delegate void MyDelegate();
 	public MyDelegate myDelegate;
@@ -16,7 +16,8 @@ public class LightListener : MonoBehaviour, Listener {
 	
 	}
 
-	public void notify(bool on) {
+	public override void notify(bool on) {
+		print ("The light listener is doing this!");
 		if (on) {
 			gameObject.GetComponent<Light> ().color = new Color (0.0f, 1.0f, 0.0f);
 				} else {

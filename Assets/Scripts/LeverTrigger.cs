@@ -6,7 +6,7 @@ public class LeverTrigger : MonoBehaviour {
 	public GameObject player;
 	public GameObject[] listeners;
 	int state = 0;
-	bool on = false;
+	bool on = true;
 	bool switched = false;
 	delegate void SwitchDelegate(bool on);
 	SwitchDelegate switchDelegate;
@@ -16,7 +16,7 @@ public class LeverTrigger : MonoBehaviour {
 		state = 0;
 		gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 0f, 1f);
 		foreach (GameObject listener in listeners) {
-			listener.GetComponent<LightListener>().notify(on);
+			switchDelegate += listener.GetComponent<Listener>().notify;
 		}
 	}
 	
@@ -27,6 +27,7 @@ public class LeverTrigger : MonoBehaviour {
 		if (!switched && (state == 1 || state == 2) && Input.GetAxis ("Activate") == 1) {
 			state = 2;
 			on = !on;
+			switchDelegate(on);
 			switched = true;
 			gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
 				} else if (state == 2) {

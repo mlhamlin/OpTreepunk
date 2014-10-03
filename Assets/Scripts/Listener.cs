@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public interface Listener {
-
-	void notify (bool on);
+public class Listener : MonoBehaviour {
+	public virtual void notify (bool on) { }
 }
