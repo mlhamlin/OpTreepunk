@@ -4,7 +4,7 @@ using System.Collections;
 public class HealthData : MonoBehaviour {
 
 	int health;
-	public float alive;
+	public bool alive;
 
 	// Use this for initialization
 	void Start () {
