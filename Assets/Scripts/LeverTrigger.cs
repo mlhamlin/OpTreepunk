@@ -30,10 +30,10 @@ public class LeverTrigger : MonoBehaviour {
 			switchDelegate(on);
 			switched = true;
 			gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
-				} else if (state == 2) {
+		} else if (state == 2) {
 			state = 1;
 			gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 0f);
-				}
+		}
 	}
 	
 	void OnTriggerEnter2D(Collider2D coll) {

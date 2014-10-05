@@ -6,7 +6,8 @@ public class InputCharController : MonoBehaviour {
 	private Character thisCharacter;
 	public string HorizontalAxis;
 	public string JumpAxis;
-	public string AttackAxis;
+	public string ActionOneAxis;
+	public string ActionTwoAxis;
 
 	// Use this for initialization
 	void Start () {
@@ -29,9 +30,14 @@ public class InputCharController : MonoBehaviour {
 			thisCharacter.Jump();
 		}
 
-		if ((!AttackAxis.Equals("")) && (Input.GetAxis(AttackAxis) > 0))
+		if ((!ActionOneAxis.Equals("")) && (Input.GetAxis(ActionOneAxis) > 0))
 		{
-			thisCharacter.Attack();
+			thisCharacter.TriggerAction1();
+		}
+
+		if ((!ActionTwoAxis.Equals("")) && (Input.GetAxis(ActionTwoAxis) > 0))
+		{
+			thisCharacter.TriggerAction2();
 		}
 	}
 }

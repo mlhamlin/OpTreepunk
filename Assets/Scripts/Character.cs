@@ -14,10 +14,16 @@ public class Character : MonoBehaviour {
 	public LayerMask whatIsGround;
 	public float jumpForce;
 
+	public Action actionOne;
+	public bool canActionOneInAir;
+	public Action actionTwo;
+	public bool canActionTwoInAir;
+
 	private bool doLeft;
 	private bool doRight;
 	private bool doJump;
-	private bool doAttack;
+	private bool doActionOne;
+	private bool doActionTwo;
 
 
 	// Use this for initialization
@@ -35,7 +41,6 @@ public class Character : MonoBehaviour {
 
 		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
 
-//		float move = Input.GetAxis("Horizontal");
 		float move = 0;
 		if (doLeft) 
 		{ 
@@ -61,10 +66,33 @@ public class Character : MonoBehaviour {
 		if (grounded && doJump) 
 		{
 			anim.SetBool("Ground", false);
+			anim.SetTrigger("Jump");
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
 		}
 
+
+
+		if (doActionOne)
+		{
+			if (canActionOneInAir || grounded)
+			{
+				anim.SetTrigger("ActionOne");
+				actionOne.performAction();
+			}
+		}
+
+		if (doActionTwo)
+		{
+			if (canActionTwoInAir || grounded)
+			{
+				anim.SetTrigger("ActionTwo");
+				actionTwo.performAction();
+			}
+		}
+
 		doJump = false;
+		doActionOne = false;
+		doActionTwo = false;
 	}
 
 	void Flip () 
@@ -92,6 +120,16 @@ public class Character : MonoBehaviour {
 
 	public void Attack()
 	{
-		doAttack = true;
+		doActionOne = true;
+	}
+
+	public void TriggerAction1()
+	{
+		doActionOne = true;
+	}
+
+	public void TriggerAction2()
+	{
+		doActionTwo = true;
 	}
 }
