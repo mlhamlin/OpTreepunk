@@ -17,12 +17,7 @@ public class InputCharController : MonoBehaviour {
 	void FixedUpdate () {
 	
 		float vel = Input.GetAxis(HorizontalAxis);
-		if (vel > 0)
-		{
-			thisCharacter.MoveRight();
-		} else if (vel < 0) {
-			thisCharacter.MoveLeft();
-		}
+        thisCharacter.SetMove(vel);
 
 		if (Input.GetAxis(JumpAxis) > 0)
 		{

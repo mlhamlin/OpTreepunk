@@ -4,18 +4,19 @@ using System.Collections;
 public class Character : MonoBehaviour {
 
 	public float maxSpeed = 3f;
+    public float speedChange = 1f;
 	bool facingRight = true;
 
 	Animator anim;
 
-	bool grounded = false;
+	public bool grounded = false;
 	public Transform groundCheck;
-	float groundRadius = 0.2f;
+	float groundRadius = 0.01f;
 	public LayerMask whatIsGround;
 	public float jumpForce;
-
-	private bool doLeft;
-	private bool doRight;
+    
+    private float nextMove;
+    private float curSpeed;
 	private bool doJump;
 	private bool doAttack;
 
@@ -34,26 +35,19 @@ public class Character : MonoBehaviour {
 		anim.SetBool("Ground", grounded);
 
 		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
-
-//		float move = Input.GetAxis("Horizontal");
-		float move = 0;
-		if (doLeft) 
-		{ 
-			move = -1; 
-		} else if (doRight) {
-			move = 1;
-		}
-
+        
+        //		float move = Input.GetAxis("Horizontal");
+        float move = 0;
+        move = nextMove;
 		anim.SetFloat("Speed", Mathf.Abs (move));
-		rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
+        rigidbody2D.AddForce(new Vector2(move*speedChange*10, 0));
+        float velx = Mathf.Clamp(rigidbody2D.velocity.x, -maxSpeed, maxSpeed);
+        rigidbody2D.velocity = new Vector2(velx, rigidbody2D.velocity.y); 
 
 		if (move > 0 && !facingRight)
 			Flip ();
 		else if (move < 0 && facingRight)
 			Flip ();
-
-		doLeft = false;
-		doRight = false;
 	}
 
 	void Update () 
@@ -75,14 +69,9 @@ public class Character : MonoBehaviour {
 		anim.gameObject.transform.localScale = theScale;
 	}
 
-	public void MoveLeft()
+	public void SetMove(float vel)
 	{
-		doLeft = true;
-	}
-
-	public void MoveRight()
-	{
-		doRight = true;
+        nextMove = vel;
 	}
 
 	public void Jump()
