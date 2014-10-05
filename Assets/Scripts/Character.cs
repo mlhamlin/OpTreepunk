@@ -21,25 +21,28 @@ public class Character : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		anim = GetComponentInChildren<Animator>();
 	}
 
 	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate () 
+	{
 
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 		anim.SetBool("Ground", grounded);
 
 		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
 
-		float move = Input.GetAxis("Horizontal");
-//		float move = 0;
-//		if (doLeft) { 
-//			move = -1; 
-//		} else if (doRight) {
-//			move = 1;
-//		}
+//		float move = Input.GetAxis("Horizontal");
+		float move = 0;
+		if (doLeft) 
+		{ 
+			move = -1; 
+		} else if (doRight) {
+			move = 1;
+		}
 
 		anim.SetFloat("Speed", Mathf.Abs (move));
 		rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
@@ -49,19 +52,46 @@ public class Character : MonoBehaviour {
 		else if (move < 0 && facingRight)
 			Flip ();
 
+		doLeft = false;
+		doRight = false;
 	}
 
-	void Update () {
-		if (grounded && (Input.GetAxis("Jump") > 0)) {
+	void Update () 
+	{
+		if (grounded && doJump) 
+		{
 			anim.SetBool("Ground", false);
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
 		}
+
+		doJump = false;
 	}
 
-	void Flip () {
+	void Flip () 
+	{
 		facingRight = !facingRight;
 		Vector3 theScale = anim.gameObject.transform.localScale;
 		theScale.x *= -1;
 		anim.gameObject.transform.localScale = theScale;
+	}
+
+	public void MoveLeft()
+	{
+		doLeft = true;
+	}
+
+	public void MoveRight()
+	{
+		doRight = true;
+	}
+
+	public void Jump()
+	{
+		doJump = true;
+	}
+
+	public void Attack()
+	{
+		doAttack = true;
 	}
 }
