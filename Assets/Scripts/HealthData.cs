@@ -3,8 +3,8 @@ using System.Collections;
 
 public class HealthData : MonoBehaviour {
 
-	int health;
-	public bool alive;
+	public int health;
+	private bool alive;
 	Animator anim;
 
 	// Use this for initialization

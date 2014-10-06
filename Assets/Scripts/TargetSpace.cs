@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class TargetSpace : MonoBehaviour {
 
 	List<Collider2D> targets;
-	LayerMask Layer;
+	public LayerMask Layer;
 
 	// Use this for initialization
 	void Start () {
