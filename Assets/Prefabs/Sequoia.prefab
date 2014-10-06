@@ -203,7 +203,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   jumpForce: 120
-  actionOne: {fileID: 0}
+  actionOne: {fileID: 11400004}
   canActionOneInAir: 0
   actionTwo: {fileID: 0}
   canActionTwoInAir: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HorizontalAxis: P2Horizontal
   JumpAxis: P2Jump
-  ActionOneAxis: 
+  ActionOneAxis: P2Action1
   ActionTwoAxis: 
 --- !u!114 &11400004
 MonoBehaviour:

@@ -39,7 +39,7 @@ public class Character : MonoBehaviour {
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 		anim.SetBool("Ground", grounded);
 
-		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
+		anim.SetFloat("vertVelocity", rigidbody2D.velocity.y);
 
 		float move = 0;
 		if (doLeft) 
