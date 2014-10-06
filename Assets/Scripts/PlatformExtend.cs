@@ -6,12 +6,22 @@ public class PlatformExtend : Listener {
     Vector2 extendloc = new Vector2(-4, 0.219f);
     Vector2 nonExtendLoc = new Vector2(0, 0.219f);
     Vector2 to, from;
+    public bool isExtended;
     float t = 1;
 
 	// Use this for initialization
 	void Start () {
-        to = nonExtendLoc;
-        from = extendloc;
+        if (isExtended)
+        {
+            to = nonExtendLoc;
+            from = extendloc;
+            gameObject.transform.localPosition = extendloc;
+        }
+        else 
+        {
+            to = nonExtendLoc;
+            from = extendloc;
+        }
 	}
 	
 	// Update is called once per frame
@@ -30,5 +40,6 @@ public class PlatformExtend : Listener {
         from = to;
         to = lastFrom;
         t = 1-t;
+        isExtended = !isExtended;
     }
 }
