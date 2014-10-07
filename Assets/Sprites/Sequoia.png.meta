@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 51350fd83a39844368a8e37ee5273db1
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Sequoia_0
+    21300002: Sequoia_1
+    21300004: Sequoia_2
+    21300006: Sequoia_3
+    21300008: Sequoia_4
+    21300010: Sequoia_5
+    21300012: Sequoia_6
+    21300014: Sequoia_7
+    21300016: Sequoia_8
+    21300018: Sequoia_9
+    21300020: Sequoia_10
+    21300022: Sequoia_11
+    21300024: Sequoia_12
+    21300026: Sequoia_13
+    21300028: Sequoia_14
+    21300030: Sequoia_15
+    21300032: Sequoia_16
+    21300034: Sequoia_17
+    21300036: Sequoia_18
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Sequoia_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1169
+        width: 451
+        height: 397
+      alignment: 9
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_1
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1340
+        width: 233
+        height: 222
+      alignment: 9
+      pivot: {x: .405803382, y: .296705097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_2
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 1206
+        width: 591
+        height: 163
+      alignment: 9
+      pivot: {x: .0847676098, y: .586525381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_3
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 866
+        width: 158
+        height: 239
+      alignment: 9
+      pivot: {x: .589612067, y: .563745201}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_4
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 874
+        width: 194
+        height: 266
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_5
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 943
+        width: 267
+        height: 345
+      alignment: 9
+      pivot: {x: .457742184, y: .197488531}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_6
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 893
+        width: 116
+        height: 226
+      alignment: 9
+      pivot: {x: .305468321, y: .824052393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_7
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 616
+        width: 127
+        height: 211
+      alignment: 9
+      pivot: {x: .522297323, y: .633551598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_8
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 567
+        width: 258
+        height: 264
+      alignment: 9
+      pivot: {x: .472030282, y: .756265819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_9
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 562
+        width: 165
+        height: 307
+      alignment: 9
+      pivot: {x: .613709629, y: .810272932}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_10
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 543
+        width: 138
+        height: 309
+      alignment: 9
+      pivot: {x: .479083508, y: .846469104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_11
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 624
+        width: 128
+        height: 232
+      alignment: 9
+      pivot: {x: .345742226, y: .827050567}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_12
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 300
+        width: 92
+        height: 208
+      alignment: 9
+      pivot: {x: .437250704, y: .806938767}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_13
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 135
+        width: 126
+        height: 338
+      alignment: 9
+      pivot: {x: .671813965, y: .838429391}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_14
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 121
+        width: 86
+        height: 337
+      alignment: 9
+      pivot: {x: .600691676, y: .853738666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_15
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 81
+        width: 123
+        height: 113
+      alignment: 9
+      pivot: {x: .535200894, y: .687228441}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_16
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 79
+        width: 125
+        height: 87
+      alignment: 9
+      pivot: {x: .315458983, y: .549767256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_17
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 81
+        width: 125
+        height: 110
+      alignment: 9
+      pivot: {x: .488454103, y: .760639369}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Sequoia_18
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 81
+        width: 125
+        height: 84
+      alignment: 9
+      pivot: {x: .222898439, y: .509265244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
