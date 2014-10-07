@@ -23,7 +23,7 @@ public class HealthData : MonoBehaviour {
 	}
 
 	public void Damage (int amount) {
-		health = Mathf.Min (0, health - amount);
+		health = Mathf.Max (0, health - amount);
 		alive = !(health == 0);
 	}
 

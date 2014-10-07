@@ -1,46 +1,44 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AIEnemyController : MonoBehaviour {
-	public AINode nextNode;
-	public float acceleration;
-	public float maxSpeed;
-	public AINode target;
-	GameObject player;
+public class AICharController : MonoBehaviour {
 
-	public Transform groundCheck;
-	float groundRadius = 0.001f;
-	public LayerMask whatIsGround;
-	public float jumpvelocity;
+	private Character thisCharacter;
+	public AINode nextNode;
+	public AINode target;
+	public GameObject raycastTarget;
 
 	// Use this for initialization
 	void Start () {
-		player = target.transform.parent.gameObject;
+		thisCharacter = GetComponent<Character>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//reset the destination each frame
 		setDestination();
+		Debug.Log ("Going to Node: " + nextNode);
 
+		float spacing = (nextNode == target) ? 1f : .1f;
 		//move left or right towards the target
-		if (nextNode.transform.position.x > rigidbody2D.transform.position.x) {
-			accelerate(acceleration);
-		} else {
-			accelerate(-acceleration);
+		if (nextNode.transform.position.x > (rigidbody2D.transform.position.x + spacing)) {
+			thisCharacter.MoveRight();
+		} else if (nextNode.transform.position.x < (rigidbody2D.transform.position.x - spacing)) {
+			thisCharacter.MoveLeft();
+		} else if (nextNode == target){
+			if ((nextNode.transform.position.x > rigidbody2D.transform.position.x) != thisCharacter.FacingRight())
+			{
+				thisCharacter.Flip();
+			}
+			thisCharacter.TriggerAction1();
 		}
 
 		//jump if on the ground and the node is higher
-		if (Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround) &&
-		    nextNode.transform.position.y > rigidbody2D.transform.position.y)
-			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpvelocity);
-	}
-
-	//accelerate the given amount up to a max velocity in either direction
-	void accelerate(float amount) {
-		float newvelocity = rigidbody2D.velocity.x + amount;
-		if (Mathf.Abs(newvelocity) <= maxSpeed)
-			rigidbody2D.velocity = new Vector2(newvelocity, rigidbody2D.velocity.y);
+		if (thisCharacter.Grounded () && nextNode.transform.position.y > rigidbody2D.transform.position.y) 
+		{
+			//Debug.Log ("Jump");
+			thisCharacter.Jump ();
+		}
 	}
 
 	//set the nextNode to be the target for movement
@@ -61,6 +59,7 @@ public class AIEnemyController : MonoBehaviour {
 		AINode[] nodes = nextNode.otherNodes;
 		Transform rt = rigidbody2D.transform;
 		Transform tt = target.transform;
+		Debug.Log(Mathf.Sqrt(sqdist(rt, target.transform)) + " ," + Mathf.Sqrt(sqdist(target.transform, tt)));
 		foreach (AINode ain in nodes) {
 			//found a better node with a better distance sum
 			if (Mathf.Sqrt(sqdist(rt, ain.transform)) + Mathf.Sqrt(sqdist(ain.transform, tt)) <
@@ -69,7 +68,7 @@ public class AIEnemyController : MonoBehaviour {
 				if (ain == target) {
 					RaycastHit2D r = Physics2D.Raycast(rt.position, tt.position - rt.position, Mathf.Infinity, (1 << 8) | (1 << 9));
 					//if the raycast just hits the target, it's fine to use as the best node
-					if (r.collider.gameObject == player) {
+					if (r.collider.gameObject == raycastTarget) {
 						nextNode = target;
 						return;
 					}

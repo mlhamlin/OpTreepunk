@@ -10,7 +10,10 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
-  m_Layer: 0
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400006}
+  - 114: {fileID: 11400004}
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +28,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
@@ -43,7 +46,7 @@ GameObject:
   - 95: {fileID: 9500000}
   - 61: {fileID: 6100000}
   - 58: {fileID: 5800000}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +62,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 212: {fileID: 21200000}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftToes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +78,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 212: {fileID: 21200002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHeel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +94,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400010}
   - 212: {fileID: 21200004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightCalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +110,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400012}
   - 212: {fileID: 21200006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +126,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400014}
   - 212: {fileID: 21200008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left Toes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +142,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400016}
   - 212: {fileID: 21200010}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHeel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +158,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400018}
   - 212: {fileID: 21200012}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftCalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +174,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400020}
   - 212: {fileID: 21200014}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftThigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +190,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400022}
   - 212: {fileID: 21200016}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +206,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400024}
   - 212: {fileID: 21200018}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BackForearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +222,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400026}
   - 212: {fileID: 21200020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BackShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +238,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400028}
   - 212: {fileID: 21200022}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontFist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +254,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400030}
   - 212: {fileID: 21200024}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontForearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +270,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400032}
   - 212: {fileID: 21200026}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FrontShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +286,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400034}
   - 212: {fileID: 21200028}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +302,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400036}
   - 212: {fileID: 21200030}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,8 +318,25 @@ GameObject:
   m_Component:
   - 4: {fileID: 400038}
   - 212: {fileID: 21200032}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Waist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100040
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400040}
+  - 114: {fileID: 11400008}
+  - 61: {fileID: 6100002}
+  m_Layer: 11
+  m_Name: TargetSpace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,7 +349,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.1145782, y: -9.29061031, z: 0}
+  m_LocalPosition: {x: -2.61771727, y: -16.0519218, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -354,11 +374,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.3448524, y: -8.64586163, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children:
   - {fileID: 400002}
   - {fileID: 400038}
+  - {fileID: 400040}
   m_Father: {fileID: 400000}
   m_RootOrder: 0
 --- !u!4 &400006
@@ -581,6 +602,18 @@ Transform:
   - {fileID: 400036}
   m_Father: {fileID: 400004}
   m_RootOrder: 1
+--- !u!4 &400040
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.12035179, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 12, z: 10}
+  m_Children: []
+  m_Father: {fileID: 400004}
+  m_RootOrder: 2
 --- !u!50 &5000000
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -618,6 +651,17 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 5, y: 12}
   m_Center: {x: 0, y: -1}
+--- !u!61 &6100002
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100040}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 2, y: 1.5}
+  m_Center: {x: 0, y: 0}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -644,16 +688,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6365bb76fc8b5411badce9d405dd71eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 3
+  maxSpeed: 2
   groundCheck: {fileID: 400002}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
   jumpForce: 120
-  actionOne: {fileID: 0}
+  actionOne: {fileID: 11400006}
   canActionOneInAir: 0
   actionTwo: {fileID: 0}
   canActionTwoInAir: 0
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2ac479d2c47574ea0f03e826545f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextNode: {fileID: 0}
+  target: {fileID: 0}
+  raycastTarget: {fileID: 0}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db48054a0a189445a794e1f0266a8ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff441fc9a460784da9827051fa8c82b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  targetSpace: {fileID: 11400008}
+  attackAll: 1
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d648edabbef0a4fa18c7a5276fb78dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Layer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

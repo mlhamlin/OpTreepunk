@@ -8,7 +8,7 @@ public class Character : MonoBehaviour {
 
 	Animator anim;
 
-	bool grounded = false;
+	private bool grounded = false;
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
@@ -95,7 +95,12 @@ public class Character : MonoBehaviour {
 		doActionTwo = false;
 	}
 
-	void Flip () 
+	public bool FacingRight ()
+	{
+		return facingRight;
+	}
+
+	public void Flip () 
 	{
 		facingRight = !facingRight;
 		Vector3 theScale = anim.gameObject.transform.localScale;
@@ -111,6 +116,10 @@ public class Character : MonoBehaviour {
 	public void MoveRight()
 	{
 		doRight = true;
+	}
+
+	public bool Grounded() {
+		return grounded;
 	}
 
 	public void Jump()

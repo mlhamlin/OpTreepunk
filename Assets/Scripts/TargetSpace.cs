@@ -13,7 +13,14 @@ public class TargetSpace : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter2D(Collider2D enter) {
-		targets.Add(enter);
+
+		if (LayerInMask(Layer, enter.gameObject.layer))
+		{
+			Debug.Log("Adding Collider:" + enter.ToString());
+			targets.Add(enter);
+		}
+
+
 	}
 
 	public void OnTriggerExit2D(Collider2D leave) {
@@ -23,5 +30,10 @@ public class TargetSpace : MonoBehaviour {
 	public List<Collider2D> getTargets()
 	{
 		return targets;
+	}
+
+	private bool LayerInMask(LayerMask mask, int layer)
+	{
+		return mask.value == 1<<layer;
 	}
 }
