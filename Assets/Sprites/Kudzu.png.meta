@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: e2a3e4108f44f47cc8ab77289631bb52
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Kudzu_0
+    21300002: Kudzu_1
+    21300004: Kudzu_2
+    21300006: Kudzu_3
+    21300008: Kudzu_4
+    21300010: Kudzu_5
+    21300012: Kudzu_6
+    21300014: Kudzu_7
+    21300016: Kudzu_8
+    21300018: Kudzu_9
+    21300020: Kudzu_10
+    21300022: Kudzu_11
+    21300024: Kudzu_12
+    21300026: Kudzu_13
+    21300028: Kudzu_14
+    21300030: Kudzu_15
+    21300032: Kudzu_16
+    21300034: Kudzu_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Kudzu_0
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1100
+        width: 169
+        height: 301
+      alignment: 9
+      pivot: {x: .609588087, y: .779489934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_1
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1273
+        width: 216
+        height: 254
+      alignment: 9
+      pivot: {x: .338041514, y: .346067905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_2
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1250
+        width: 109
+        height: 252
+      alignment: 9
+      pivot: {x: .367844313, y: .777509928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_3
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 1231
+        width: 145
+        height: 254
+      alignment: 9
+      pivot: {x: .585149527, y: .864812434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_4
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 1219
+        width: 117
+        height: 265
+      alignment: 9
+      pivot: {x: .464822888, y: .876703441}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_5
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 777
+        width: 120
+        height: 217
+      alignment: 9
+      pivot: {x: .328514725, y: .890516698}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_6
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 850
+        width: 251
+        height: 344
+      alignment: 9
+      pivot: {x: .549190581, y: .146161094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_7
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 915
+        width: 132
+        height: 211
+      alignment: 9
+      pivot: {x: .297335088, y: .902472734}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_8
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 779
+        width: 121
+        height: 340
+      alignment: 9
+      pivot: {x: .704081357, y: .878681123}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_9
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 757
+        width: 98
+        height: 344
+      alignment: 9
+      pivot: {x: .583991826, y: .876071692}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 586
+        width: 189
+        height: 196
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_11
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 706
+        width: 85
+        height: 106
+      alignment: 9
+      pivot: {x: .383544207, y: .749026895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_12
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 531
+        width: 97
+        height: 121
+      alignment: 9
+      pivot: {x: .46598345, y: .759059966}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_13
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 528
+        width: 127
+        height: 122
+      alignment: 9
+      pivot: {x: .616915464, y: .743413687}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_14
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 529
+        width: 115
+        height: 123
+      alignment: 9
+      pivot: {x: .553904116, y: .738725364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_15
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 268
+        width: 263
+        height: 252
+      alignment: 9
+      pivot: {x: .525092065, y: .801154613}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_16
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 356
+        width: 106
+        height: 74
+      alignment: 9
+      pivot: {x: .262257129, y: .589178145}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Kudzu_17
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 356
+        width: 103
+        height: 71
+      alignment: 9
+      pivot: {x: .232035518, y: .523236752}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

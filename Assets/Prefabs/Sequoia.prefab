@@ -307,7 +307,7 @@ GameObject:
   - 4: {fileID: 400036}
   - 212: {fileID: 21200026}
   m_Layer: 0
-  m_Name: TopForarm
+  m_Name: FrontForarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,7 +323,7 @@ GameObject:
   - 4: {fileID: 400038}
   - 212: {fileID: 21200028}
   m_Layer: 0
-  m_Name: TopElbow
+  m_Name: FrontElbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,7 +339,7 @@ GameObject:
   - 4: {fileID: 400040}
   - 212: {fileID: 21200030}
   m_Layer: 0
-  m_Name: TopShoulder
+  m_Name: FrontShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -355,7 +355,7 @@ GameObject:
   - 4: {fileID: 400042}
   - 212: {fileID: 21200032}
   m_Layer: 0
-  m_Name: Waist
+  m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -387,7 +387,7 @@ GameObject:
   - 4: {fileID: 400046}
   - 212: {fileID: 21200036}
   m_Layer: 0
-  m_Name: Body
+  m_Name: Waist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -429,7 +429,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0199651718, y: -7.98733902, z: 0}
+  m_LocalPosition: {x: -.0199604034, y: -7.77772903, z: 0}
   m_LocalScale: {x: 12.5, y: 12.5, z: 12.5}
   m_Children: []
   m_Father: {fileID: 400002}
