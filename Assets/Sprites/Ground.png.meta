@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 0f8938845d8244e35b1b744bc53cddd0
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Ground_0
+    21300002: Ground_1
+    21300004: Ground_2
+    21300006: Ground_3
+    21300008: Ground_4
+    21300010: Ground_5
+    21300012: Ground_6
+    21300014: Ground_7
+    21300016: Ground_8
+    21300018: Ground_9
+    21300020: Ground_10
+    21300022: Ground_11
+    21300024: Ground_12
+    21300026: Ground_13
+    21300028: Ground_14
+    21300030: Ground_15
+    21300032: Ground_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Ground_0
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1213
+        width: 207
+        height: 313
+      alignment: 9
+      pivot: {x: .716348648, y: .53498894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_1
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1056
+        width: 290
+        height: 470
+      alignment: 9
+      pivot: {x: .523164511, y: .104317136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_2
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1225
+        width: 133
+        height: 288
+      alignment: 9
+      pivot: {x: .260050595, y: .599754333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_3
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 1173
+        width: 164
+        height: 312
+      alignment: 9
+      pivot: {x: .499999255, y: .877152264}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_4
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 885
+        width: 149
+        height: 256
+      alignment: 9
+      pivot: {x: .484566927, y: .838314056}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_5
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 785
+        width: 182
+        height: 203
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_6
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 906
+        width: 135
+        height: 235
+      alignment: 9
+      pivot: {x: .428856522, y: .844139576}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_7
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 781
+        width: 216
+        height: 321
+      alignment: 9
+      pivot: {x: .713355184, y: .83529675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_8
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 740
+        width: 113
+        height: 319
+      alignment: 9
+      pivot: {x: .513299167, y: .923088074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_9
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 685
+        width: 116
+        height: 131
+      alignment: 9
+      pivot: {x: .402201027, y: .769064426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_10
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 456
+        width: 259
+        height: 232
+      alignment: 9
+      pivot: {x: .510101438, y: .759374678}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_11
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 356
+        width: 132
+        height: 314
+      alignment: 9
+      pivot: {x: .618426681, y: .940258443}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_12
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 499
+        width: 153
+        height: 146
+      alignment: 9
+      pivot: {x: .377394319, y: .775151491}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_13
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 101
+        width: 614
+        height: 257
+      alignment: 9
+      pivot: {x: .0909364149, y: .40955016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_14
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 138
+        width: 163
+        height: 157
+      alignment: 9
+      pivot: {x: .442457706, y: .751077533}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_15
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 285
+        width: 127
+        height: 103
+      alignment: 9
+      pivot: {x: .192278042, y: .514335275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ground_16
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 68
+        width: 129
+        height: 113
+      alignment: 9
+      pivot: {x: .184929892, y: .501978934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
