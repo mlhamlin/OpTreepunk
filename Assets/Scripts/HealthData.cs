@@ -4,6 +4,7 @@ using System.Collections;
 public class HealthData : MonoBehaviour {
 
 	public int health;
+	public int maxhealth;
 	private bool alive;
 	Animator anim;
 
