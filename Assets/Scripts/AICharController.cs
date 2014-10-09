@@ -17,7 +17,6 @@ public class AICharController : MonoBehaviour {
 	void Update () {
 		//reset the destination each frame
 		setDestination();
-		Debug.Log ("Going to Node: " + nextNode);
 
 		float spacing = (nextNode == target) ? 1f : .1f;
 		//move left or right towards the target
@@ -59,7 +58,7 @@ public class AICharController : MonoBehaviour {
 		AINode[] nodes = nextNode.otherNodes;
 		Transform rt = rigidbody2D.transform;
 		Transform tt = target.transform;
-		Debug.Log(Mathf.Sqrt(sqdist(rt, target.transform)) + " ," + Mathf.Sqrt(sqdist(target.transform, tt)));
+
 		foreach (AINode ain in nodes) {
 			//found a better node with a better distance sum
 			if (Mathf.Sqrt(sqdist(rt, ain.transform)) + Mathf.Sqrt(sqdist(ain.transform, tt)) <

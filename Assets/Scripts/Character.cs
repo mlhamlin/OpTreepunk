@@ -9,7 +9,8 @@ public class Character : MonoBehaviour {
 	Animator anim;
 
 	private bool grounded = false;
-	public Transform groundCheck;
+	public Transform groundCheckLeft;
+	public Transform groundCheckRight;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
 	public float jumpForce;
@@ -45,7 +46,8 @@ public class Character : MonoBehaviour {
 		if(isDead)
 			return;
 		
-		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+		grounded = (Physics2D.OverlapCircle(groundCheckLeft.position, groundRadius, whatIsGround) ||
+					Physics2D.OverlapCircle(groundCheckRight.position, groundRadius, whatIsGround));
 		anim.SetBool("Ground", grounded);
 
 		anim.SetFloat("vertVelocity", rigidbody2D.velocity.y);
