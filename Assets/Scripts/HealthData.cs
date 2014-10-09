@@ -35,5 +35,10 @@ public class HealthData : MonoBehaviour {
 			health = Mathf.Min (0, health - amount);
 		}
 	}
+
+	public bool isDead ()
+	{
+		return !alive;
+	}
 	
 }

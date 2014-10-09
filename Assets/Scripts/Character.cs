@@ -121,6 +121,9 @@ public class Character : MonoBehaviour {
 
 	public void Flip () 
 	{
+		if (isDead)
+			return;
+
 		facingRight = !facingRight;
 		Vector3 theScale = anim.gameObject.transform.localScale;
 		theScale.x *= -1;
@@ -167,7 +170,7 @@ public class Character : MonoBehaviour {
 		anim.SetTrigger("Die");
 		Invoke("Fade",30);
 	}
-
+	
 	public void Fade (){
 		anim.SetTrigger("Fade");
 		Invoke("myDestroy",15);
