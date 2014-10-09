@@ -4,21 +4,23 @@ using System.Collections;
 public class HealthData : MonoBehaviour {
 
 	public int health;
+	public int maxhealth;
 	private bool alive;
-	Animator anim;
+	private bool hasDied;
+	private Character thisCharacter;
 
 	// Use this for initialization
 	void Start () {
-		anim = GetComponentInChildren<Animator>();
+		thisCharacter = GetComponent<Character>();
 		alive = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(!alive)
+		if(!alive && !hasDied)
 		{
-			anim.SetTrigger("Die");
-			Invoke("Fade",30);
+			hasDied = true;
+			thisCharacter.Kill();
 		}
 	}
 
@@ -37,12 +39,9 @@ public class HealthData : MonoBehaviour {
 		}
 	}
 
-	public void Fade (){
-		anim.SetTrigger("Fade");
-		Invoke("myDestroy",15);
+	public bool isDead ()
+	{
+		return !alive;
 	}
-
-	public void myDestroy (){
-		Destroy(gameObject);
-	}
+	
 }

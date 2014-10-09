@@ -47,7 +47,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400004}
   m_Layer: 9
-  m_Name: GroundCheck
+  m_Name: GCRight
   m_TagString: Untagged
   m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -409,6 +409,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100050
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400050}
+  m_Layer: 9
+  m_Name: GCLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -434,8 +449,9 @@ Transform:
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children:
   - {fileID: 400006}
-  - {fileID: 400004}
+  - {fileID: 400050}
   - {fileID: 400046}
+  - {fileID: 400004}
   m_Father: {fileID: 400000}
   m_RootOrder: 0
 --- !u!4 &400004
@@ -445,11 +461,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0199604034, y: -7.77772903, z: 0}
+  m_LocalPosition: {x: 1.5, y: -8, z: 0}
   m_LocalScale: {x: 12.5, y: 12.5, z: 12.5}
   m_Children: []
   m_Father: {fileID: 400002}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -733,6 +749,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400006}
   m_RootOrder: 0
+--- !u!4 &400050
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100050}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5, y: -8, z: 0}
+  m_LocalScale: {x: 12.5, y: 12.5, z: 12.5}
+  m_Children: []
+  m_Father: {fileID: 400002}
+  m_RootOrder: 1
 --- !u!20 &2000000
 Camera:
   m_ObjectHideFlags: 1
@@ -819,7 +847,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &9200000
 Behaviour:
   m_ObjectHideFlags: 1
@@ -854,15 +882,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
-  groundCheck: {fileID: 400004}
+  groundCheckLeft: {fileID: 400050}
+  groundCheckRight: {fileID: 400004}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
   jumpForce: 120
   actionOne: {fileID: 11400004}
   canActionOneInAir: 0
+  actionOneCooldown: 1
   actionTwo: {fileID: 0}
   canActionTwoInAir: 0
+  actionTwoCooldown: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -904,6 +935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  maxhealth: 100
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
