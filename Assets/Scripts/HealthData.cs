@@ -23,6 +23,9 @@ public class HealthData : MonoBehaviour {
 	}
 
 	public void Damage (int amount) {
+		if (!alive)
+			return;
+
 		health = Mathf.Max (0, health - amount);
 		alive = !(health == 0);
 	}

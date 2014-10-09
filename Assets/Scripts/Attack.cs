@@ -20,6 +20,9 @@ public class Attack : Action {
 		List<Collider2D> targets = targetSpace.getTargets();
 		foreach(Collider2D col in targets)
 		{
+			if (col == null)
+				return;
+
 			HealthData health = findThatHealth(col.gameObject);
 
 			if (health != null)

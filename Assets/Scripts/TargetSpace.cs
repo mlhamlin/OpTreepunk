@@ -16,8 +16,10 @@ public class TargetSpace : MonoBehaviour {
 
 		if (LayerInMask(Layer, enter.gameObject.layer))
 		{
-			Debug.Log("Adding Collider:" + enter.ToString());
-			targets.Add(enter);
+			if (!targets.Contains(enter))
+			{
+				targets.Add(enter);
+			}
 		}
 
 
