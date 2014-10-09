@@ -16,14 +16,21 @@ public class Character : MonoBehaviour {
 
 	public Action actionOne;
 	public bool canActionOneInAir;
+	public float actionOneCooldown;
+	private float actionOneTimeLeft;
+
 	public Action actionTwo;
 	public bool canActionTwoInAir;
-
+	public float actionTwoCooldown;
+	private float actionTwoTimeLeft;
+	
 	private bool doLeft;
 	private bool doRight;
 	private bool doJump;
 	private bool doActionOne;
 	private bool doActionTwo;
+
+	private bool isDead;
 
 
 	// Use this for initialization
@@ -35,7 +42,9 @@ public class Character : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-
+		if(isDead)
+			return;
+		
 		grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 		anim.SetBool("Ground", grounded);
 
@@ -63,6 +72,12 @@ public class Character : MonoBehaviour {
 
 	void Update () 
 	{
+		if(isDead)
+			return;
+
+		actionOneTimeLeft = Mathf.Max(0, actionOneTimeLeft - Time.deltaTime);
+		actionTwoTimeLeft = Mathf.Max(0, actionTwoTimeLeft - Time.deltaTime);
+		
 		if (grounded && doJump) 
 		{
 			anim.SetBool("Ground", false);
@@ -74,19 +89,21 @@ public class Character : MonoBehaviour {
 
 		if (doActionOne)
 		{
-			if (canActionOneInAir || grounded)
+			if ((actionOneTimeLeft <= 0f) && (canActionOneInAir || grounded))
 			{
 				anim.SetTrigger("ActionOne");
 				actionOne.performAction();
+				actionOneTimeLeft = actionOneCooldown;
 			}
 		}
 
 		if (doActionTwo)
 		{
-			if (canActionTwoInAir || grounded)
+			if ((actionTwoTimeLeft <= 0f) && (canActionTwoInAir || grounded))
 			{
 				anim.SetTrigger("ActionTwo");
 				actionTwo.performAction();
+				actionTwoTimeLeft = actionOneCooldown;
 			}
 		}
 
@@ -141,4 +158,21 @@ public class Character : MonoBehaviour {
 	{
 		doActionTwo = true;
 	}
+
+	public void Kill()
+	{
+		isDead = true;
+		anim.SetTrigger("Die");
+		Invoke("Fade",30);
+	}
+
+	public void Fade (){
+		anim.SetTrigger("Fade");
+		Invoke("myDestroy",15);
+	}
+	
+	public void myDestroy (){
+		Destroy(gameObject);
+	}
+
 }

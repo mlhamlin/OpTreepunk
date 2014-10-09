@@ -861,8 +861,10 @@ MonoBehaviour:
   jumpForce: 120
   actionOne: {fileID: 11400004}
   canActionOneInAir: 0
+  actionOneCooldown: 2
   actionTwo: {fileID: 0}
   canActionTwoInAir: 0
+  actionTwoCooldown: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
