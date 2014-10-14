@@ -11,7 +11,7 @@ public class Character : MonoBehaviour {
 	private bool grounded = false;
 	public Transform groundCheckLeft;
 	public Transform groundCheckRight;
-	float groundRadius = 0.2f;
+	float groundRadius = 0.02f;
 	public LayerMask whatIsGround;
 	public float jumpForce;
 
