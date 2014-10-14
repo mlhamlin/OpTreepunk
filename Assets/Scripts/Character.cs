@@ -86,8 +86,7 @@ public class Character : MonoBehaviour {
 			anim.SetTrigger("Jump");
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
 		}
-
-
+		doJump = false;
 
 		if (doActionOne)
 		{
