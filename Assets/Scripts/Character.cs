@@ -55,8 +55,10 @@ public class Character : MonoBehaviour {
 		float move = 0;
 		if (doLeft) 
 		{ 
+			doLeft = false;
 			move = -1; 
 		} else if (doRight) {
+			doRight = false;
 			move = 1;
 		}
 
@@ -67,9 +69,6 @@ public class Character : MonoBehaviour {
 			Flip ();
 		else if (move < 0 && facingRight)
 			Flip ();
-
-		doLeft = false;
-		doRight = false;
 	}
 
 	void Update () 
@@ -82,6 +81,7 @@ public class Character : MonoBehaviour {
 		
 		if (grounded && doJump) 
 		{
+			doJump = false;
 			anim.SetBool("Ground", false);
 			anim.SetTrigger("Jump");
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
@@ -91,6 +91,7 @@ public class Character : MonoBehaviour {
 
 		if (doActionOne)
 		{
+			doActionOne = false;
 			if ((actionOneTimeLeft <= 0f) && (canActionOneInAir || grounded))
 			{
 				anim.SetTrigger("ActionOne");
@@ -101,6 +102,7 @@ public class Character : MonoBehaviour {
 
 		if (doActionTwo)
 		{
+			doActionTwo = false;
 			if ((actionTwoTimeLeft <= 0f) && (canActionTwoInAir || grounded))
 			{
 				anim.SetTrigger("ActionTwo");
@@ -108,10 +110,6 @@ public class Character : MonoBehaviour {
 				actionTwoTimeLeft = actionOneCooldown;
 			}
 		}
-
-		doJump = false;
-		doActionOne = false;
-		doActionTwo = false;
 	}
 
 	public bool FacingRight ()
