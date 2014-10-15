@@ -8,6 +8,10 @@ public class Character : MonoBehaviour {
 
 	Animator anim;
 
+	public bool flying = false;
+	public float flyingAccel = 0.1f;
+
+	public bool canJump = true;
 	private bool grounded = false;
 	public Transform groundCheckLeft;
 	public Transform groundCheckRight;
@@ -45,10 +49,12 @@ public class Character : MonoBehaviour {
 	{
 		if(isDead)
 			return;
-		
-		grounded = (Physics2D.OverlapCircle(groundCheckLeft.position, groundRadius, whatIsGround) ||
-					Physics2D.OverlapCircle(groundCheckRight.position, groundRadius, whatIsGround));
-		anim.SetBool("Ground", grounded);
+
+		if (canJump) {
+			grounded = (Physics2D.OverlapCircle(groundCheckLeft.position, groundRadius, whatIsGround) ||
+						Physics2D.OverlapCircle(groundCheckRight.position, groundRadius, whatIsGround));
+			anim.SetBool("Ground", grounded);
+		}
 
 		anim.SetFloat("vertVelocity", rigidbody2D.velocity.y);
 
@@ -63,11 +69,14 @@ public class Character : MonoBehaviour {
 		}
 
 		anim.SetFloat("Speed", Mathf.Abs (move));
-		rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
+		if (flying) {
+			float newSpeed = rigidbody2D.velocity.x + flyingAccel * move;
+			if (Mathf.Abs(newSpeed) <= maxSpeed)
+				rigidbody2D.velocity = new Vector2(newSpeed, rigidbody2D.velocity.y);
+		} else
+			rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
 
-		if (move > 0 && !facingRight)
-			Flip ();
-		else if (move < 0 && facingRight)
+		if (facingRight ? move < 0 : move > 0)
 			Flip ();
 	}
 
@@ -79,7 +88,7 @@ public class Character : MonoBehaviour {
 		actionOneTimeLeft = Mathf.Max(0, actionOneTimeLeft - Time.deltaTime);
 		actionTwoTimeLeft = Mathf.Max(0, actionTwoTimeLeft - Time.deltaTime);
 		
-		if (grounded && doJump) 
+		if (canJump && grounded && doJump) 
 		{
 			doJump = false;
 			anim.SetBool("Ground", false);
