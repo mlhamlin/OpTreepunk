@@ -19,5 +19,8 @@ public class AIFlyingController : MonoBehaviour {
 		} else if (target.transform.position.x < rigidbody2D.transform.position.x) {
 			thisCharacter.MoveLeft();
 		}
+
+		//always try to attack the player
+		thisCharacter.TriggerAction1();
 	}
 }
