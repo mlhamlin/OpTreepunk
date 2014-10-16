@@ -170,6 +170,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  offsetTop: 0
+  offsetBottom: 0
+  pullAccel: .200000003
+  pushAccel: 3
+  maxYSpeed: 5
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
