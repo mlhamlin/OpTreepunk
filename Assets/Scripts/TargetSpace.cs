@@ -8,7 +8,7 @@ public class TargetSpace : MonoBehaviour {
 	public LayerMask Layer;
 
 	// Use this for initialization
-	void Start () {
+	protected void Start () {
 		targets = new List<Collider2D>();	
 	}
 
@@ -34,7 +34,7 @@ public class TargetSpace : MonoBehaviour {
 		return targets;
 	}
 
-	private bool LayerInMask(LayerMask mask, int layer)
+	protected bool LayerInMask(LayerMask mask, int layer)
 	{
 		return mask.value == 1<<layer;
 	}
