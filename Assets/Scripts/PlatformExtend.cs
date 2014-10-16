@@ -33,7 +33,7 @@ public class PlatformExtend : Listener {
         gameObject.transform.localPosition = Vector2.Lerp(from, to, t);
 	}
 
-    public override void notify(bool on)
+    public override void notify()
     {
         print("Moving platform!");
         Vector2 lastFrom = from;
