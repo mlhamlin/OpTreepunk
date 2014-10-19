@@ -11,10 +11,6 @@ public class ChargeAttack: Action {
 	public Character character;
 
 	override public void performAction () {
-		int facing = character.FacingRight () ? 1 : -1;
-		Vector2 force = new Vector2 (impulse * facing, 0);
-		gameObject.rigidbody2D.AddRelativeForce (force);
-
 		List<Collider2D> targets = targetSpace.getTargets();
 
 		foreach(Collider2D col in targets)
@@ -33,6 +29,10 @@ public class ChargeAttack: Action {
 				}
 			}
 		}
+
+		int facing = character.FacingRight () ? 1 : -1;
+		Vector2 force = new Vector2 (impulse * facing, 0);
+		gameObject.rigidbody2D.AddRelativeForce (force);
 	}
 
 	private HealthData findThatHealth(GameObject g)

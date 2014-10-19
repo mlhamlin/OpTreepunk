@@ -50,7 +50,7 @@ GameObject:
   m_Layer: 9
   m_Name: GCRight
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -421,7 +421,7 @@ GameObject:
   m_Layer: 9
   m_Name: GCLeft
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -891,9 +891,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  jumpForce: 200
+  jumpForce: 10
   currentStamina: 0
-  MaxStamina: 2000
+  MaxStamina: 500
   StaminaPerTick: 1
   actions:
   - {fileID: 11400004}
@@ -1000,7 +1000,7 @@ MonoBehaviour:
   damage: 20
   targetSpace: {fileID: 11400008}
   attackAll: 1
-  impulse: 300
+  impulse: 5000
   character: {fileID: 11400000}
 --- !u!124 &12400000
 Behaviour:

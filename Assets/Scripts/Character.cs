@@ -102,8 +102,6 @@ public class Character : MonoBehaviour {
 			anim.SetBool("Ground", false);
 			anim.SetTrigger("Jump");
 			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.y, jumpForce);
-
-			//rigidbody2D.AddForce(new Vector2(0, jumpForce));
 		}
 
 		doJump = false;
@@ -214,6 +212,7 @@ public class Character : MonoBehaviour {
 			anim.SetTrigger ("Action" + n);
 			actions [n].performAction ();
 			actionTimeLeft [n] = actionCoolDown [n];
+			currentStamina = Mathf.Max(0, currentStamina - actionCost[n]);
 		}
 	}
 }

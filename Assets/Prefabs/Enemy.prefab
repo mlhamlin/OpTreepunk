@@ -726,7 +726,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  jumpForce: 275
+  jumpForce: 10
   currentStamina: 0
   MaxStamina: 0
   StaminaPerTick: 0
