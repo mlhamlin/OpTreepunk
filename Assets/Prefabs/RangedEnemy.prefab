@@ -97,12 +97,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   jumpForce: 0
+  actions:
+  - {fileID: 11400002}
+  canActionInAir: 01
+  actionCost: 00000000
+  actionCoolDown:
+  - 3
   actionOne: {fileID: 11400002}
   canActionOneInAir: 1
+  actionOneCost: 0
   actionOneCooldown: 3
   actionTwo: {fileID: 0}
   canActionTwoInAir: 0
+  actionTwoCost: 0
   actionTwoCooldown: 0
+  currentStamina: 0
+  MaxStamina: 0
+  StaminaPerSecond: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   maxhealth: 50
+  loot: {fileID: 0}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1

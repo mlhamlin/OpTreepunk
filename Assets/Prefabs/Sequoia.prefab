@@ -882,18 +882,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
+  flying: 0
+  flyingAccel: .100000001
+  canJump: 1
   groundCheckLeft: {fileID: 400050}
   groundCheckRight: {fileID: 400004}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
   jumpForce: 120
+  actions:
+  - {fileID: 11400004}
+  canActionInAir: 00
+  actionCost: 00000000
+  actionCoolDown:
+  - 1
   actionOne: {fileID: 11400004}
   canActionOneInAir: 0
+  actionOneCost: 0
   actionOneCooldown: 1
   actionTwo: {fileID: 0}
   canActionTwoInAir: 0
+  actionTwoCost: 0
   actionTwoCooldown: 0
+  currentStamina: 0
+  MaxStamina: 0
+  StaminaPerSecond: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -936,6 +950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxhealth: 100
+  loot: {fileID: 0}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1

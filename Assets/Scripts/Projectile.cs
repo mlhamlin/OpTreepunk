@@ -6,10 +6,6 @@ public class Projectile : TargetSpace {
 	public LayerMask wall;
 	public Action targetAction;
 
-	// Use this for initialization
-	void Start () {
-		base.Start();
-	}
 
 	public void OnTriggerEnter2D(Collider2D enter) {
 		//destroy this object if it hit the wall
