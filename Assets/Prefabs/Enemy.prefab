@@ -727,23 +727,15 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   jumpForce: 275
+  currentStamina: 0
+  MaxStamina: 0
+  StaminaPerTick: 0
   actions:
   - {fileID: 11400006}
   canActionInAir: 00
   actionCost: 00000000
   actionCoolDown:
   - 3
-  actionOne: {fileID: 11400006}
-  canActionOneInAir: 0
-  actionOneCost: 0
-  actionOneCooldown: 3
-  actionTwo: {fileID: 0}
-  canActionTwoInAir: 0
-  actionTwoCost: 0
-  actionTwoCooldown: 0
-  currentStamina: 0
-  MaxStamina: 0
-  StaminaPerSecond: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -813,7 +805,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loot:
   - {fileID: 100000, guid: aa07c9d9ffa30d44e90a49408a47edba, type: 2}
-  chanceNothing: 50
+  - {fileID: 100000, guid: c0bc62f6e1d11dc48a568715edeef332, type: 2}
+  chanceNothing: 25
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

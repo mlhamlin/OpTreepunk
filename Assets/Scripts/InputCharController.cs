@@ -32,12 +32,12 @@ public class InputCharController : MonoBehaviour {
 
 		if ((!ActionOneAxis.Equals("")) && (Input.GetAxis(ActionOneAxis) > 0))
 		{
-			thisCharacter.TriggerAction1();
+			thisCharacter.TriggerAction(0);
 		}
 
 		if ((!ActionTwoAxis.Equals("")) && (Input.GetAxis(ActionTwoAxis) > 0))
 		{
-			thisCharacter.TriggerAction2();
+			thisCharacter.TriggerAction(1);
 		}
 	}
 }

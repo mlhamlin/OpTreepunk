@@ -711,24 +711,16 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  jumpForce: 275
+  jumpForce: 10
+  currentStamina: 0
+  MaxStamina: 0
+  StaminaPerTick: 0
   actions:
   - {fileID: 0}
   canActionInAir: 00
   actionCost: 00000000
   actionCoolDown:
   - 0
-  actionOne: {fileID: 0}
-  canActionOneInAir: 0
-  actionOneCost: 0
-  actionOneCooldown: 0
-  actionTwo: {fileID: 0}
-  canActionTwoInAir: 0
-  actionTwoCost: 0
-  actionTwoCooldown: 0
-  currentStamina: 0
-  MaxStamina: 0
-  StaminaPerSecond: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
