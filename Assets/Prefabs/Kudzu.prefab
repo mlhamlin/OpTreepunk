@@ -389,8 +389,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.63826942, y: -8.01613808, z: 0}
-  m_LocalScale: {x: 12.5, y: 12.5, z: 12.5}
+  m_LocalPosition: {x: 1.5, y: -8, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 400002}
   m_RootOrder: 2
@@ -634,8 +634,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.93613052, y: -7.96649933, z: 0}
-  m_LocalScale: {x: 12.5, y: 12.5, z: 12.5}
+  m_LocalPosition: {x: -1.5, y: -8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
   m_RootOrder: 0
@@ -674,8 +674,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 5, y: 12}
-  m_Center: {x: 0, y: -1}
+  m_Size: {x: 5, y: 12.5}
+  m_Center: {x: 0, y: -1.25}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -703,18 +703,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
+  flying: 0
+  flyingAccel: .100000001
+  canJump: 1
   groundCheckLeft: {fileID: 400042}
   groundCheckRight: {fileID: 400004}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  jumpForce: 120
+  jumpForce: 275
+  actions:
+  - {fileID: 0}
+  canActionInAir: 00
+  actionCost: 00000000
+  actionCoolDown:
+  - 0
   actionOne: {fileID: 0}
   canActionOneInAir: 0
+  actionOneCost: 0
   actionOneCooldown: 0
   actionTwo: {fileID: 0}
   canActionTwoInAir: 0
+  actionTwoCost: 0
   actionTwoCooldown: 0
+  currentStamina: 0
+  MaxStamina: 0
+  StaminaPerSecond: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

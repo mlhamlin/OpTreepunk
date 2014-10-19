@@ -5,6 +5,8 @@ public class HealthData : MonoBehaviour {
 
 	public int health;
 	public int maxhealth;
+	public LootDrop loot;
+
 	private bool alive;
 	private bool hasDied;
 	private Character thisCharacter;
@@ -19,6 +21,9 @@ public class HealthData : MonoBehaviour {
 	void Update () {
 		if(!alive && !hasDied)
 		{
+			if(loot != null)
+				loot.Drop();
+
 			hasDied = true;
 			thisCharacter.Kill();
 		}
@@ -35,7 +40,7 @@ public class HealthData : MonoBehaviour {
 	public void Heal (int amount){
 		if (alive) 
 		{
-			health = Mathf.Min (0, health - amount);
+			health = Mathf.Min (maxhealth, health + amount);
 		}
 	}
 

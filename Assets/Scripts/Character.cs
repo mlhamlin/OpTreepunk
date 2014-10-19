@@ -19,29 +19,36 @@ public class Character : MonoBehaviour {
 	public LayerMask whatIsGround;
 	public float jumpForce;
 
-	public Action actionOne;
-	public bool canActionOneInAir;
-	public float actionOneCooldown;
-	private float actionOneTimeLeft;
-
-	public Action actionTwo;
-	public bool canActionTwoInAir;
-	public float actionTwoCooldown;
-	private float actionTwoTimeLeft;
+	public Action[] actions;
+	public bool[] canActionInAir;
+	public int[] actionCost;
+	public float[] actionCoolDown;
+	private float[] actionTimeLeft;
 	
 	private bool doLeft;
 	private bool doRight;
 	private bool doJump;
-	private bool doActionOne;
-	private bool doActionTwo;
+	private bool[] doAction;
 
 	private bool isDead;
+
+	public int currentStamina;
+	public int MaxStamina;
+	public int StaminaPerSecond;
 
 
 	// Use this for initialization
 	void Start () 
 	{
 		anim = GetComponentInChildren<Animator>();
+		doAction = new bool[actions.Length];
+		actionTimeLeft = new float[actions.Length];
+		if ((actions.Length != canActionInAir.Length) ||
+						(actions.Length != actionCost.Length) ||
+						(actions.Length != actionCoolDown.Length)) 
+		{
+			Debug.LogError(gameObject.ToString() + " action arrays are unequal length");
+		}
 	}
 
 	// Update is called once per frame
@@ -85,8 +92,7 @@ public class Character : MonoBehaviour {
 		if(isDead)
 			return;
 
-		actionOneTimeLeft = Mathf.Max(0, actionOneTimeLeft - Time.deltaTime);
-		actionTwoTimeLeft = Mathf.Max(0, actionTwoTimeLeft - Time.deltaTime);
+		tickActionTime();
 		
 		if (canJump && grounded && doJump) 
 		{
@@ -95,29 +101,17 @@ public class Character : MonoBehaviour {
 			anim.SetTrigger("Jump");
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
 		}
+
 		doJump = false;
 
-		if (doActionOne)
-		{
-			doActionOne = false;
-			if ((actionOneTimeLeft <= 0f) && (canActionOneInAir || grounded))
+		for (int i = 0; i < doAction.Length; i++) {
+			if (doAction[i])
 			{
-				anim.SetTrigger("ActionOne");
-				actionOne.performAction();
-				actionOneTimeLeft = actionOneCooldown;
+				performAction(i);
 			}
 		}
 
-		if (doActionTwo)
-		{
-			doActionTwo = false;
-			if ((actionTwoTimeLeft <= 0f) && (canActionTwoInAir || grounded))
-			{
-				anim.SetTrigger("ActionTwo");
-				actionTwo.performAction();
-				actionTwoTimeLeft = actionOneCooldown;
-			}
-		}
+		resetActionFlags ();
 	}
 
 	public bool FacingRight ()
@@ -157,17 +151,22 @@ public class Character : MonoBehaviour {
 
 	public void Attack()
 	{
-		doActionOne = true;
+		doAction [0] = true;
 	}
 
 	public void TriggerAction1()
 	{
-		doActionOne = true;
+		doAction [0] = true;
 	}
 
 	public void TriggerAction2()
 	{
-		doActionTwo = true;
+		doAction [1] = true;
+	}
+
+	public void TriggerAction(int number)
+	{
+		doAction [number] = true;
 	}
 
 	public void Kill()
@@ -186,4 +185,31 @@ public class Character : MonoBehaviour {
 		Destroy(gameObject);
 	}
 
+	private void resetActionFlags() 
+	{
+		for (int i = 0; i < doAction.Length; i++) {
+			doAction[i] = false;
+		}
+	}
+
+	private void tickActionTime()
+	{
+		for (int i = 0; i < actionTimeLeft.Length; i++) 
+		{
+			actionTimeLeft [i] = Mathf.Max (0, actionTimeLeft [i] - Time.deltaTime);
+		}
+	}
+
+	private void performAction(int n)
+	{
+		doAction[n] = false;
+		if ((actionTimeLeft [n] <= 0f) && 
+			(canActionInAir [n] || grounded) &&
+			(currentStamina >= actionCost [n])) 
+		{
+			anim.SetTrigger ("Action" + n);
+			actions [n].performAction ();
+			actionTimeLeft [n] = actionCoolDown [n];
+		}
+	}
 }

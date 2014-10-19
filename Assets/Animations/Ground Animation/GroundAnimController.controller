@@ -32,13 +32,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: ActionOne
+  - m_Name: Action0
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: ActionTwo
+  - m_Name: Action1
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -101,7 +101,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ActionOne
+    m_ConditionEvent: Action0
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -309,7 +309,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ActionTwo
+    m_ConditionEvent: Action1
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -668,7 +668,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ActionOne
+  m_Name: ActionZero
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -683,7 +683,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ActionTwo
+  m_Name: ActionOne
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
