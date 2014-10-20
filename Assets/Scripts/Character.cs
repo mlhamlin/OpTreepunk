@@ -19,6 +19,10 @@ public class Character : MonoBehaviour {
 	public LayerMask whatIsGround;
 	public float jumpForce;
 
+	public int currentStamina;
+	public int MaxStamina;
+	public int StaminaPerTick;
+
 	public Action[] actions;
 	public bool[] canActionInAir;
 	public int[] actionCost;
@@ -32,14 +36,10 @@ public class Character : MonoBehaviour {
 
 	private bool isDead;
 
-	public int currentStamina;
-	public int MaxStamina;
-	public int StaminaPerSecond;
-
-
 	// Use this for initialization
 	void Start () 
 	{
+		currentStamina = MaxStamina;
 		anim = GetComponentInChildren<Animator>();
 		doAction = new bool[actions.Length];
 		actionTimeLeft = new float[actions.Length];
@@ -85,6 +85,8 @@ public class Character : MonoBehaviour {
 
 		if (facingRight ? move < 0 : move > 0)
 			Flip ();
+
+		addStamina (StaminaPerTick);
 	}
 
 	void Update () 
@@ -99,7 +101,7 @@ public class Character : MonoBehaviour {
 			doJump = false;
 			anim.SetBool("Ground", false);
 			anim.SetTrigger("Jump");
-			rigidbody2D.AddForce(new Vector2(0, jumpForce));
+			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.y, jumpForce);
 		}
 
 		doJump = false;
@@ -149,11 +151,6 @@ public class Character : MonoBehaviour {
 		doJump = true;
 	}
 
-	public void Attack()
-	{
-		doAction [0] = true;
-	}
-
 	public void TriggerAction1()
 	{
 		doAction [0] = true;
@@ -185,6 +182,11 @@ public class Character : MonoBehaviour {
 		Destroy(gameObject);
 	}
 
+	public void addStamina(int amount)
+	{
+		currentStamina = Mathf.Min (MaxStamina, currentStamina + amount);
+	}
+
 	private void resetActionFlags() 
 	{
 		for (int i = 0; i < doAction.Length; i++) {
@@ -210,6 +212,7 @@ public class Character : MonoBehaviour {
 			anim.SetTrigger ("Action" + n);
 			actions [n].performAction ();
 			actionTimeLeft [n] = actionCoolDown [n];
+			currentStamina = Mathf.Max(0, currentStamina - actionCost[n]);
 		}
 	}
 }

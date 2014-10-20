@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400012}
   m_Layer: 9
   m_Name: Sequoia
   m_TagString: Untagged
@@ -49,7 +50,7 @@ GameObject:
   m_Layer: 9
   m_Name: GCRight
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -420,7 +421,7 @@ GameObject:
   m_Layer: 9
   m_Name: GCLeft
   m_TagString: Untagged
-  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -890,24 +891,18 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  jumpForce: 120
+  jumpForce: 10
+  currentStamina: 0
+  MaxStamina: 500
+  StaminaPerTick: 1
   actions:
   - {fileID: 11400004}
-  canActionInAir: 00
-  actionCost: 00000000
+  - {fileID: 11400012}
+  canActionInAir: 0000
+  actionCost: 0000000090010000
   actionCoolDown:
   - 1
-  actionOne: {fileID: 11400004}
-  canActionOneInAir: 0
-  actionOneCost: 0
-  actionOneCooldown: 1
-  actionTwo: {fileID: 0}
-  canActionTwoInAir: 0
-  actionTwoCost: 0
-  actionTwoCooldown: 0
-  currentStamina: 0
-  MaxStamina: 0
-  StaminaPerSecond: 0
+  - 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -922,7 +917,7 @@ MonoBehaviour:
   HorizontalAxis: P2Horizontal
   JumpAxis: P2Jump
   ActionOneAxis: P2Action1
-  ActionTwoAxis: 
+  ActionTwoAxis: P2Action2
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -991,6 +986,22 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   waschecked: 0
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1f8ac2339a19f47a4872e9f4233cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  targetSpace: {fileID: 11400008}
+  attackAll: 1
+  impulse: 5000
+  character: {fileID: 11400000}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
