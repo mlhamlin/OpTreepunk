@@ -175,7 +175,7 @@ public class Character : MonoBehaviour {
 	
 	public void Fade (){
 		anim.SetTrigger("Fade");
-		Invoke("myDestroy",15);
+		Invoke("myDestroy",5);
 	}
 	
 	public void myDestroy (){
