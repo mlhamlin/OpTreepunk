@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
   - 61: {fileID: 6100000}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.98714256, y: -8.18149757, z: -.0356445312}
+  m_LocalPosition: {x: -7.93151188, y: -8.10874557, z: -.0356445312}
   m_LocalScale: {x: 1.16528141, y: 1.1652832, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39,7 +39,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: .300000012, y: .300000012}
+  m_Size: {x: 1.18400002, y: .944000006}
   m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -52,7 +52,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5487f86de12d9fc4997d2ca3c7ea71af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: lever
   player: {fileID: 0}
+  switching: 0
+  isRight: 0
   listeners:
   - {fileID: 0}
 --- !u!212 &21200000
@@ -74,8 +77,8 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1d7f0eb1eb5c647dcaccbf39bc0ea552, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 56a2297179f20d34396d486b0c52b7a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

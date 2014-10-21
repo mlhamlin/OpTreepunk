@@ -5,16 +5,15 @@ public class PullLever : Action {
 
 	Activator activator;
     public Activator defaultActivator;
-	Character character;
 
 	void Start() 
 	{
-		character = gameObject.GetComponent<Character> ();
+        activator = defaultActivator;
 	}
 
 	public override void performAction()
 	{
-			activator.Activate();
+		activator.Activate();
 	}
 
 	void OnTriggerEnter2D(Collider2D collider)
@@ -25,10 +24,12 @@ public class PullLever : Action {
         }
 	}
 
-    void OnTriggerLeave2D(Collider2D collider)
+    void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.gameObject.layer == 12 && collider.GetComponent<Activator>() == activator )
+        print("collder " + collider + " left!");
+        if (collider.gameObject.layer == 12 && collider.GetComponent<Activator>().Equals(activator))
         {
+            print("leaving switch " + activator);
             activator = defaultActivator;
         }
     }

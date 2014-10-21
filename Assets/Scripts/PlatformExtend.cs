@@ -35,7 +35,6 @@ public class PlatformExtend : Listener {
 
     public override void notify()
     {
-        print("Moving platform!");
         Vector2 lastFrom = from;
         from = to;
         to = lastFrom;

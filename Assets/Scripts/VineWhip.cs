@@ -5,18 +5,20 @@ public class VineWhip : Action {
 
 	Activator activator;
     public Activator defaultActivator;
-	Character character;
+	public Character character;
+    public VineAnimation animation;
 
-	void Start() 
-	{
-		character = gameObject.GetComponent<Character> ();
-	}
+    void Start()
+    {
+        activator = defaultActivator;
+    }
 
 	public override void performAction()
 	{
 		if  (activator.type == "lever" && ((Lever)activator).isRight != character.FacingRight())
 		{
 			activator.Activate();
+            animation.ShootVine(Mathf.Abs(transform.position.x-activator.transform.position.x));
 		}
 	}
 
@@ -28,7 +30,7 @@ public class VineWhip : Action {
         }
 	}
 
-    void OnTriggerLeave2D(Collider2D collider)
+    void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.gameObject.layer == 12 && collider.GetComponent<Activator>() == activator )
         {

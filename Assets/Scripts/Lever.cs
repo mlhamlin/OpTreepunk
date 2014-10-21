@@ -25,12 +25,20 @@ public class Lever : Activator {
 		switching = Mathf.Max(switching-Time.deltaTime, 0);
 	}
 
+    void flip()
+    {
+        isRight = !isRight;
+        Vector3 scale = transform.localScale;
+        scale.x = -1 * scale.x;
+        transform.localScale = scale;
+    }
+
 	// Activate this switch if it's not already switching
 	public override void Activate() {
 		if (switching <= 0)
 		{
 			switching = 0.5f;
-			isRight = !isRight;
+            flip();
 			switchDelegate();
 		}
 	}
