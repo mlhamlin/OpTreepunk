@@ -91,7 +91,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -.104528472, w: .994521916}
   m_LocalPosition: {x: .209999993, y: .370000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -104,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.61288977, y: -16.1749802, z: 0}
+  m_LocalPosition: {x: -6.14525986, y: -15.9410648, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -116,7 +116,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -.438371211, w: .898794055}
   m_LocalPosition: {x: .209999993, y: .370000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -259,6 +259,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7864ec1f7a220420690430e6d37a4c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eye: {fileID: 100000}
+  eyeRotationOffset: -12
+  gun: {fileID: 100004}
+  gunRotationOffset: -52
+  trackingTarget: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
