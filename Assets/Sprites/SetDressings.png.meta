@@ -1,7 +1,12 @@
 fileFormatVersion: 2
 guid: 30dd961bcf1d0754088051268c727790
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SetDressings_0
+    21300002: SetDressings_1
+    21300004: SetDressings_2
+    21300006: SetDressings_3
+    21300008: SetDressings_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +30,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +47,56 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: SetDressings_0
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 624
+        width: 114
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SetDressings_1
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 554
+        width: 181
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SetDressings_2
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 436
+        width: 101
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SetDressings_3
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 400
+        width: 108
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SetDressings_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 93
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
