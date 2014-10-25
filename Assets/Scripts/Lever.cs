@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Lever : Activator {
 
-	public GameObject player;
 	public float switching;
 	public bool isRight;
 	public GameObject[] listeners;
@@ -15,6 +14,10 @@ public class Lever : Activator {
 	// set the type and add delegates
 	void Start () {
 		type = "lever";
+        if (listeners.Length == 0)
+        {
+            switchDelegate = () => { };
+        }
 		foreach (GameObject listener in listeners) {
 			switchDelegate += listener.GetComponent<Listener>().notify;
 		}

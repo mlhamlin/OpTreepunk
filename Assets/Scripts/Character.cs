@@ -209,6 +209,7 @@ public class Character : MonoBehaviour {
 			(canActionInAir [n] || grounded) &&
 			(currentStamina >= actionCost [n])) 
 		{
+            print("Actually doing the thing");
 			anim.SetTrigger ("Action" + n);
 			actions [n].performAction ();
 			actionTimeLeft [n] = actionCoolDown [n];

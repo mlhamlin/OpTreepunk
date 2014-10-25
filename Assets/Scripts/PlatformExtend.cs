@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlatformExtend : Listener {
 
-    Vector2 extendloc = new Vector2(-4, 0.219f);
-    Vector2 nonExtendLoc = new Vector2(0, 0.219f);
+    Vector2 extendloc;
+    Vector2 nonExtendLoc;
     Vector2 to, from;
     public bool isExtended;
     float t = 1;
@@ -13,6 +13,9 @@ public class PlatformExtend : Listener {
 	void Start () {
         if (isExtended)
         {
+            nonExtendLoc = transform.position;
+            extendloc = transform.position;
+            extendloc.x -= 4;
             to = nonExtendLoc;
             from = extendloc;
             gameObject.transform.localPosition = extendloc;
