@@ -45,17 +45,18 @@ public class VineAnimation : MonoBehaviour {
             disableTime -= Time.deltaTime;
             if (disableTime <= 0)
             {
-                transform.parent.parent.parent.GetComponent<Character>().enabled = true;
+                transform.parent.parent.parent.GetComponent<Character>().Disable(false);
             }
         }
 	}
 
-    public void ShootVine(float dist)
+    public void ShootVine(Vector2 targetLoc)
     {
+        float dist = Mathf.Abs(transform.position.x - targetLoc.x);
         numberToCreate = dist / vineWidth;
         timeBetweenSegments = vineWidth / vineSpeed;
         disableTime = dist / vineSpeed;
         print(transform.parent.parent);
-        transform.parent.parent.parent.GetComponent<Character>().enabled = false;
+        transform.parent.parent.parent.GetComponent<Character>().Disable(true);
     }
 }

@@ -11,14 +11,18 @@ public class PlatformExtend : Listener {
 
 	// Use this for initialization
 	void Start () {
+        nonExtendLoc = transform.position;
+        extendloc = transform.position;
+        float rot = transform.eulerAngles.z;
+        float scale = transform.localScale.x;
+        extendloc.x += 4 * scale * Mathf.Cos(rot * Mathf.PI / 180);
+        extendloc.y += 4 * scale * Mathf.Sin(rot * Mathf.PI / 180);
         if (isExtended)
         {
-            nonExtendLoc = transform.position;
-            extendloc = transform.position;
-            extendloc.x -= 4;
-            to = nonExtendLoc;
-            from = extendloc;
-            gameObject.transform.localPosition = extendloc;
+            to = extendloc;
+            from = nonExtendLoc;
+            transform.position = extendloc;
+
         }
         else 
         {
