@@ -6,6 +6,7 @@ public class SpawnPoint : MonoBehaviour {
 	public GameObject Enemy;
 	public AINode PlayerNode;
 	public GameObject RaycastTarget;
+    public bool active;
 	public bool InfiniteSpawn;
 	public int SpawnCount;
 
@@ -18,7 +19,7 @@ public class SpawnPoint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if ((InfiniteSpawn || (SpawnCount > 0)) && ((currentEnemy == null) || (currentEnemy.isDead())))
+		if (active && (InfiniteSpawn || (SpawnCount > 0)) && ((currentEnemy == null) || (currentEnemy.isDead())))
 		{
 			Spawn();
 		}
