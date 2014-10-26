@@ -4,7 +4,7 @@ using System.Collections;
 public class Lever : Activator {
 
 	public float switching;
-	public bool isRight;
+	public bool isLeft;
 	public GameObject[] listeners;
 
 
@@ -30,7 +30,7 @@ public class Lever : Activator {
 
     void flip()
     {
-        isRight = !isRight;
+        isLeft = !isLeft;
         Vector3 scale = transform.localScale;
         scale.x = -1 * scale.x;
         transform.localScale = scale;
