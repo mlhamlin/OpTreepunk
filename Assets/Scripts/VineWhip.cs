@@ -15,10 +15,10 @@ public class VineWhip : Action {
 
 	public override void performAction()
 	{
-		if  (activator.type == "lever" && ((Lever)activator).isRight != character.FacingRight())
+		if  (activator.type == "lever" && ((Lever)activator).isLeft != character.FacingRight())
 		{
 			activator.Activate();
-            animation.ShootVine(Mathf.Abs(transform.position.x-activator.transform.position.x));
+            animation.ShootVine(activator.transform.position);
 		}
 	}
 

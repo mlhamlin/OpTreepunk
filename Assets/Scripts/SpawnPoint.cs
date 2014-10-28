@@ -6,6 +6,7 @@ public class SpawnPoint : MonoBehaviour {
 	public GameObject Enemy;
 	public AINode PlayerNode;
 	public GameObject RaycastTarget;
+    public bool active;
 	public bool InfiniteSpawn;
 	public int SpawnCount;
 
@@ -13,12 +14,11 @@ public class SpawnPoint : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Spawn();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if ((InfiniteSpawn || (SpawnCount > 0)) && ((currentEnemy == null) || (currentEnemy.isDead())))
+		if (active && (InfiniteSpawn || (SpawnCount > 0)) && ((currentEnemy == null) || (currentEnemy.isDead())))
 		{
 			Spawn();
 		}
@@ -34,6 +34,17 @@ public class SpawnPoint : MonoBehaviour {
 			aiScript.target = PlayerNode;
 			aiScript.raycastTarget = RaycastTarget;
 		}
+        AIFlyingController flyScript = enemy.GetComponent<AIFlyingController>();
+        if (flyScript != null)
+        {
+            flyScript.target = PlayerNode;
+        }
+        AIRangedController rangeScript = enemy.GetComponent<AIRangedController>();
+        if (rangeScript != null)
+        {
+            rangeScript.trackingTarget = RaycastTarget;
+            enemy.GetComponent<SpawnProjectile>().target = RaycastTarget;
+        }
 
 		currentEnemy = enemy.GetComponent<HealthData>();
 		

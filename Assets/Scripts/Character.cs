@@ -215,4 +215,19 @@ public class Character : MonoBehaviour {
 			currentStamina = Mathf.Max(0, currentStamina - actionCost[n]);
 		}
 	}
+
+    public void Disable(bool off)
+    {
+        if (off)
+        {
+            Vector2 vel = rigidbody2D.velocity;
+            vel.x = 0;
+            rigidbody2D.velocity = vel;
+            enabled = false;
+        }
+        else
+        {
+            enabled = true;
+        }
+    }
 }

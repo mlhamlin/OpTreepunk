@@ -3,19 +3,26 @@ using System.Collections;
 
 public class PlatformExtend : Listener {
 
-    Vector2 extendloc = new Vector2(-4, 0.219f);
-    Vector2 nonExtendLoc = new Vector2(0, 0.219f);
+    Vector2 extendloc;
+    Vector2 nonExtendLoc;
     Vector2 to, from;
     public bool isExtended;
     float t = 1;
 
 	// Use this for initialization
 	void Start () {
+        nonExtendLoc = transform.position;
+        extendloc = transform.position;
+        float rot = transform.eulerAngles.z;
+        float scale = transform.localScale.x;
+        extendloc.x += 4 * scale * Mathf.Cos(rot * Mathf.PI / 180);
+        extendloc.y += 4 * scale * Mathf.Sin(rot * Mathf.PI / 180);
         if (isExtended)
         {
-            to = nonExtendLoc;
-            from = extendloc;
-            gameObject.transform.localPosition = extendloc;
+            to = extendloc;
+            from = nonExtendLoc;
+            transform.position = extendloc;
+
         }
         else 
         {

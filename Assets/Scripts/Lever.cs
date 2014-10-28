@@ -3,9 +3,8 @@ using System.Collections;
 
 public class Lever : Activator {
 
-	public GameObject player;
 	public float switching;
-	public bool isRight;
+	public bool isLeft;
 	public GameObject[] listeners;
 
 
@@ -15,6 +14,10 @@ public class Lever : Activator {
 	// set the type and add delegates
 	void Start () {
 		type = "lever";
+        if (listeners.Length == 0)
+        {
+            switchDelegate = () => { };
+        }
 		foreach (GameObject listener in listeners) {
 			switchDelegate += listener.GetComponent<Listener>().notify;
 		}
@@ -27,7 +30,7 @@ public class Lever : Activator {
 
     void flip()
     {
-        isRight = !isRight;
+        isLeft = !isLeft;
         Vector3 scale = transform.localScale;
         scale.x = -1 * scale.x;
         transform.localScale = scale;
