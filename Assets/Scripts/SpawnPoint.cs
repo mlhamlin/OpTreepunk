@@ -14,7 +14,6 @@ public class SpawnPoint : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Spawn();
 	}
 	
 	// Update is called once per frame
@@ -35,6 +34,17 @@ public class SpawnPoint : MonoBehaviour {
 			aiScript.target = PlayerNode;
 			aiScript.raycastTarget = RaycastTarget;
 		}
+        AIFlyingController flyScript = enemy.GetComponent<AIFlyingController>();
+        if (flyScript != null)
+        {
+            flyScript.target = PlayerNode;
+        }
+        AIRangedController rangeScript = enemy.GetComponent<AIRangedController>();
+        if (rangeScript != null)
+        {
+            rangeScript.trackingTarget = RaycastTarget;
+            enemy.GetComponent<SpawnProjectile>().target = RaycastTarget;
+        }
 
 		currentEnemy = enemy.GetComponent<HealthData>();
 		

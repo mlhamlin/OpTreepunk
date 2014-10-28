@@ -9,7 +9,7 @@ public class WaveTrigger : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject == player)
+        if (collider.transform.parent.gameObject == player)
         {
             if (!triggered)
             {

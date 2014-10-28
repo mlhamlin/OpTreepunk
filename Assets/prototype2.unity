@@ -6894,7 +6894,7 @@ GameObject:
   - 4: {fileID: 800359633}
   - 114: {fileID: 800359635}
   - 61: {fileID: 800359634}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: WaveTrigger3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6922,7 +6922,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 800359632}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: .100000001, y: 3.5}
   m_Center: {x: 0, y: 0}
 --- !u!114 &800359635
@@ -9782,11 +9782,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f444efb5b79144f50b515f314342f9bd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.12340212
+      value: -14.0112019
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f444efb5b79144f50b515f314342f9bd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -8.67858219
+      value: -14.465888
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f444efb5b79144f50b515f314342f9bd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9810,7 +9810,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f444efb5b79144f50b515f314342f9bd, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11400010, guid: f444efb5b79144f50b515f314342f9bd, type: 2}
       propertyPath: otherNodes.Array.data[13]
@@ -10110,7 +10110,7 @@ GameObject:
   - 4: {fileID: 1155805736}
   - 114: {fileID: 1155805738}
   - 61: {fileID: 1155805737}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: WaveTrigger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10138,7 +10138,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1155805735}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: .100000001, y: 2}
   m_Center: {x: 0, y: 0}
 --- !u!114 &1155805738
@@ -11467,7 +11467,7 @@ GameObject:
   - 4: {fileID: 1333815806}
   - 114: {fileID: 1333815808}
   - 61: {fileID: 1333815807}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: WaveTrigger1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11495,7 +11495,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1333815805}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: .100000001, y: 2}
   m_Center: {x: 0, y: 0}
 --- !u!114 &1333815808
@@ -14601,7 +14601,7 @@ GameObject:
   - 4: {fileID: 1756338947}
   - 114: {fileID: 1756338946}
   - 61: {fileID: 1756338945}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: WaveTrigger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14617,7 +14617,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1756338944}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: .100000001, y: 2}
   m_Center: {x: 0, y: 0}
 --- !u!114 &1756338946
@@ -16700,7 +16700,7 @@ Transform:
   m_PrefabInternal: {fileID: 1134754113}
   m_GameObject: {fileID: 2013892933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.12340212, y: -8.67858219, z: 0}
+  m_LocalPosition: {x: -14.0112019, y: -14.465888, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 505927032}
