@@ -55,7 +55,7 @@ MonoBehaviour:
   Layer:
     serializedVersion: 2
     m_Bits: 512
-  healAmount: 100
+  healAmount: 75
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
