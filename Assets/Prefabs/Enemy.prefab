@@ -775,7 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff441fc9a460784da9827051fa8c82b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 1
   targetSpace: {fileID: 11400008}
   attackAll: 1
 --- !u!114 &11400008
@@ -806,7 +806,8 @@ MonoBehaviour:
   loot:
   - {fileID: 100000, guid: aa07c9d9ffa30d44e90a49408a47edba, type: 2}
   - {fileID: 100000, guid: c0bc62f6e1d11dc48a568715edeef332, type: 2}
-  chanceNothing: 25
+  - {fileID: 100000, guid: aa07c9d9ffa30d44e90a49408a47edba, type: 2}
+  chanceNothing: 10
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class VineWhip : Action {
 
-	Activator activator;
+	public Activator activator;
     public Activator defaultActivator;
 	public Character character;
     public VineAnimation animation;
@@ -27,6 +27,7 @@ public class VineWhip : Action {
         if (collider.gameObject.layer == 12)
         {
             activator = collider.GetComponent<Activator>();
+            activator.SetAsVineSwitch();
         }
 	}
 
@@ -34,6 +35,7 @@ public class VineWhip : Action {
     {
         if (collider.gameObject.layer == 12 && collider.GetComponent<Activator>() == activator )
         {
+            activator.SetAsInactive();
             activator = defaultActivator;
         }
     }

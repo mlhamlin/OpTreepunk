@@ -45,4 +45,19 @@ public class Lever : Activator {
 			switchDelegate();
 		}
 	}
+
+    public override void SetAsInactive()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
+    }
+
+    public override void SetAsPlayerSwitch()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(150, 150, 0);
+    }
+
+    public override void SetAsVineSwitch()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(0, 150, 0);
+    }
 }

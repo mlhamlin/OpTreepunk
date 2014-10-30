@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff441fc9a460784da9827051fa8c82b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 1
   targetSpace: {fileID: 11400000}
   attackAll: 1
 --- !u!212 &21200000

@@ -13,7 +13,6 @@ public class PullLever : Action {
 
 	public override void performAction()
 	{
-        print("pulling lever!");
 		activator.Activate();
 	}
 
@@ -22,6 +21,7 @@ public class PullLever : Action {
         if (collider.gameObject.layer == 12)
         {
             activator = collider.GetComponent<Activator>();
+            activator.SetAsPlayerSwitch();
         }
 	}
 
@@ -29,6 +29,7 @@ public class PullLever : Action {
     {
         if (collider.gameObject.layer == 12 && collider.GetComponent<Activator>().Equals(activator))
         {
+            activator.SetAsInactive();
             activator = defaultActivator;
         }
     }
